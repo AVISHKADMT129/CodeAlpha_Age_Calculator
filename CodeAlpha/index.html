@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Age Calculator</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Age Calculator</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<div class="container">
-  <h1>Age Calculator</h1>
-  <div>
-    <label for="dob-day">Day:</label>
-    <input type="number" id="dob-day" min="1" max="31" required>
-    <label for="dob-month">Month:</label>
-    <input type="number" id="dob-month" min="1" max="12" required>
-    <label for="dob-year">Year:</label>
-    <input type="number" id="dob-year" min="1900" max="2024" required>
-  </div>
-  <br>
-  <button onclick="calculateAge()">Calculate Age</button>
-  <p id="result"></p>
-</div>
-
-<script src="script.js"></script>
-
+    <div class="container">
+        <div class="caption">HOW OLD AM I?</div> <!-- New caption div -->
+        <div class="inputs-wrapper">
+            <input type="date" id="date-input">
+            <button onclick="ageCalculate()">Calculate</button>
+        </div>
+        <div class="outputs-wrapper">
+            <div>
+                <span id="years">-</span>
+                <p>Years</p>
+            </div>
+            <div>
+                <span id="months">-</span>
+                <p>Months</p>
+            </div>
+            <div>
+                <span id="days">-</span>
+                <p>Days</p>
+            </div>
+           
+        </div>
+        <button id="back-btn" onclick="goBack()">Back</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
