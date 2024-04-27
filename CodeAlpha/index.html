@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Age Calculator</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="container1">
-      <div class="container2">How Old Am I ?</div>
-      <img
-        src="https://st4.depositphotos.com/27811286/30384/v/450/depositphotos_303843522-stock-illustration-man-grow-life-cycle-vector.jpg"
-        alt="Image"
-        class="image"
-      />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Calculator</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
 
-      <div class="container3">
-        <!-- <h1>Age Calculator</h1> -->
-        <form id="ageForm">
-          <!-- <label for="dob">Enter DOB :</label> -->
-          <input type="date" id="dob" name="dob" required />
-          <button type="submit">Calculate Age</button>
-        </form>
-        <div id="result"></div>
-        <button id="resetBtn" style="display: none">Back</button>
-      </div>
-    </div>
-    <script src="script.js"></script>
-  </body>
+<div class="container">
+  <h1>Age Calculator</h1>
+  <div>
+    <label for="dob-day">Day:</label>
+    <input type="number" id="dob-day" min="1" max="31" required>
+    <label for="dob-month">Month:</label>
+    <input type="number" id="dob-month" min="1" max="12" required>
+    <label for="dob-year">Year:</label>
+    <input type="number" id="dob-year" min="1900" max="2024" required>
+  </div>
+  <br>
+  <button onclick="calculateAge()">Calculate Age</button>
+  <p id="result"></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
 </html>
